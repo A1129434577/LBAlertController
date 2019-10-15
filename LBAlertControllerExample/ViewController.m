@@ -52,7 +52,7 @@
     
     UILabel *userView = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), 100)];
     userView.textAlignment = NSTextAlignmentCenter;
-    userView.text = @"你可以在这里做任何事情";
+    userView.text = @"这里可以添加userView";
     userView.backgroundColor = [UIColor cyanColor];
     alertC.userView = userView;
     [self presentViewController:alertC animated:YES completion:nil];
