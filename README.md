@@ -29,4 +29,4 @@ userView.backgroundColor = [UIColor cyanColor];
 alertC.userView = userView;
 [self presentViewController:alertC animated:YES completion:nil];
 ```
-![]()
+![](https://github.com/A1129434577/LBAlertController/blob/master/LBAlertController.png?raw=true)
