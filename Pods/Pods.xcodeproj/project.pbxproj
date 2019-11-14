@@ -7,47 +7,47 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8694B3FD232A99DA5445C34253FBF288 /* LBCustemPresentTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 19238AACD2BEDFF078DE1164C6E6B9A4 /* LBCustemPresentTransitions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		96737C267211D4C07170F7AB2F8D7710 /* Pods-LBAlertControllerExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F963DF4AF50C744745B2D330D86DAF5C /* Pods-LBAlertControllerExample-dummy.m */; };
-		CE0826FAB6ADCB7508C5D17C7465B426 /* LBCustemPresentTransitions.h in Headers */ = {isa = PBXBuildFile; fileRef = 34FA47AF29BFF6D820D507B5F9A98F6E /* LBCustemPresentTransitions.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F0B4FDCEEEF128C9EAD521982BD12470 /* LBCustemPresentTransitions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8012FC5333C1368672DD0B624F702DE /* LBCustemPresentTransitions-dummy.m */; };
+		6B9C9252E740CEF85DB1112CDF92DEA2 /* Pods-LBAlertControllerExample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F963DF4AF50C744745B2D330D86DAF5C /* Pods-LBAlertControllerExample-dummy.m */; };
+		C515C0592234B690F26E72163F5FB390 /* LBPresentTransitions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5106484123A0958C8883BA662FE7B17 /* LBPresentTransitions-dummy.m */; };
+		D2A5698E64C3D2C2265D0C2D76682272 /* LBPresentTransitions.h in Headers */ = {isa = PBXBuildFile; fileRef = F2E7CC001C473FB38BBBAA1BAB8EA41F /* LBPresentTransitions.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D3BC59AEA425E607ACA92849C3CA2A1F /* LBPresentTransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9A99D96885C0276D8210BE29B818C63 /* LBPresentTransitions.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		64EE2D72326178AF4C334AC901AD438D /* PBXContainerItemProxy */ = {
+		05B357B27B826B7E77A13880D07ED488 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3586A0FD2146A4C9B9F6223A39912874;
-			remoteInfo = LBCustemPresentTransitions;
+			remoteGlobalIDString = E7445FC9D56CEAF43DD4EFE332940EFA;
+			remoteInfo = LBPresentTransitions;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		07032952478F9A416C8F6947E81AC6C0 /* Pods-LBAlertControllerExample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LBAlertControllerExample-acknowledgements.markdown"; sourceTree = "<group>"; };
-		19238AACD2BEDFF078DE1164C6E6B9A4 /* LBCustemPresentTransitions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LBCustemPresentTransitions.m; path = LBCustemPresentTransitions/LBCustemPresentTransitions.m; sourceTree = "<group>"; };
 		1A58F37D987F6977F712AAA540B862C5 /* Pods-LBAlertControllerExample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LBAlertControllerExample-acknowledgements.plist"; sourceTree = "<group>"; };
-		34FA47AF29BFF6D820D507B5F9A98F6E /* LBCustemPresentTransitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LBCustemPresentTransitions.h; path = LBCustemPresentTransitions/LBCustemPresentTransitions.h; sourceTree = "<group>"; };
-		3EB33FEFE1754D9A324F3192EE736583 /* libLBCustemPresentTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLBCustemPresentTransitions.a; path = libLBCustemPresentTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		50E0034FBD688E836E18EC16BDCA4ADC /* LBCustemPresentTransitions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBCustemPresentTransitions.xcconfig; sourceTree = "<group>"; };
 		6A048B36A52F3AEC90ECB2B17E3F208C /* libPods-LBAlertControllerExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LBAlertControllerExample.a"; path = "libPods-LBAlertControllerExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		76E9CD5B681F89F43CDF77BFBCE41DEA /* LBCustemPresentTransitions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBCustemPresentTransitions-prefix.pch"; sourceTree = "<group>"; };
+		6F0F8CDAE0F4FD3BCADCE30DAC78D1B9 /* libLBPresentTransitions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libLBPresentTransitions.a; path = libLBPresentTransitions.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		78AE602563026246EA5FA1D3FC71D7A1 /* Pods-LBAlertControllerExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBAlertControllerExample.release.xcconfig"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		D8012FC5333C1368672DD0B624F702DE /* LBCustemPresentTransitions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBCustemPresentTransitions-dummy.m"; sourceTree = "<group>"; };
+		A1549020750B15621AE23736F0F77C5D /* LBPresentTransitions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LBPresentTransitions.xcconfig; sourceTree = "<group>"; };
+		A5106484123A0958C8883BA662FE7B17 /* LBPresentTransitions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LBPresentTransitions-dummy.m"; sourceTree = "<group>"; };
+		D9A99D96885C0276D8210BE29B818C63 /* LBPresentTransitions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = LBPresentTransitions.m; path = LBPresentTransitions/LBPresentTransitions.m; sourceTree = "<group>"; };
 		DCF77F0CF643E5882A90843A49146EE7 /* Pods-LBAlertControllerExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LBAlertControllerExample.debug.xcconfig"; sourceTree = "<group>"; };
+		F2E7CC001C473FB38BBBAA1BAB8EA41F /* LBPresentTransitions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LBPresentTransitions.h; path = LBPresentTransitions/LBPresentTransitions.h; sourceTree = "<group>"; };
 		F963DF4AF50C744745B2D330D86DAF5C /* Pods-LBAlertControllerExample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LBAlertControllerExample-dummy.m"; sourceTree = "<group>"; };
+		FA6ACBB45F0E680E8829A5F6371E7769 /* LBPresentTransitions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LBPresentTransitions-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B116919D3633342F446F937A35505EA /* Frameworks */ = {
+		25E0BD1CC138D62382A2EA9412F66217 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FC4704B45D342B57AAD7110DC8428A1A /* Frameworks */ = {
+		A1F9C42DFEF59A20020646867532BE5F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,32 +57,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5052128037DF5D269014FCBE6A835B13 /* Products */ = {
+		3F8BC8AACEC9844C6CFBD7B15C0A45A4 /* LBPresentTransitions */ = {
 			isa = PBXGroup;
 			children = (
-				3EB33FEFE1754D9A324F3192EE736583 /* libLBCustemPresentTransitions.a */,
-				6A048B36A52F3AEC90ECB2B17E3F208C /* libPods-LBAlertControllerExample.a */,
+				F2E7CC001C473FB38BBBAA1BAB8EA41F /* LBPresentTransitions.h */,
+				D9A99D96885C0276D8210BE29B818C63 /* LBPresentTransitions.m */,
+				6293A812736A25A2928B714F980B41DF /* Support Files */,
 			);
-			name = Products;
+			name = LBPresentTransitions;
+			path = LBPresentTransitions;
 			sourceTree = "<group>";
 		};
-		6D6DB8291ADA578DE1B8F591FE624F59 /* Pods */ = {
+		6293A812736A25A2928B714F980B41DF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EB1B846027E72DD2C9D0CCE8FC846B2D /* LBCustemPresentTransitions */,
+				A1549020750B15621AE23736F0F77C5D /* LBPresentTransitions.xcconfig */,
+				A5106484123A0958C8883BA662FE7B17 /* LBPresentTransitions-dummy.m */,
+				FA6ACBB45F0E680E8829A5F6371E7769 /* LBPresentTransitions-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LBPresentTransitions";
+			sourceTree = "<group>";
+		};
+		CB9D6E66C2D21FCC8B1B725B1C111061 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F8BC8AACEC9844C6CFBD7B15C0A45A4 /* LBPresentTransitions */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		837BCBE4B0D427FC2F55FF7EED2C163C /* Support Files */ = {
+		CBCA19D619B08E750BD4960E8F6E74F6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50E0034FBD688E836E18EC16BDCA4ADC /* LBCustemPresentTransitions.xcconfig */,
-				D8012FC5333C1368672DD0B624F702DE /* LBCustemPresentTransitions-dummy.m */,
-				76E9CD5B681F89F43CDF77BFBCE41DEA /* LBCustemPresentTransitions-prefix.pch */,
+				6F0F8CDAE0F4FD3BCADCE30DAC78D1B9 /* libLBPresentTransitions.a */,
+				6A048B36A52F3AEC90ECB2B17E3F208C /* libPods-LBAlertControllerExample.a */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/LBCustemPresentTransitions";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CD7A8129D0CEBFD8EF492E16909377B5 /* Targets Support Files */ = {
@@ -98,8 +109,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				6D6DB8291ADA578DE1B8F591FE624F59 /* Pods */,
-				5052128037DF5D269014FCBE6A835B13 /* Products */,
+				CB9D6E66C2D21FCC8B1B725B1C111061 /* Pods */,
+				CBCA19D619B08E750BD4960E8F6E74F6 /* Products */,
 				CD7A8129D0CEBFD8EF492E16909377B5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -124,71 +135,60 @@
 			path = "Target Support Files/Pods-LBAlertControllerExample";
 			sourceTree = "<group>";
 		};
-		EB1B846027E72DD2C9D0CCE8FC846B2D /* LBCustemPresentTransitions */ = {
-			isa = PBXGroup;
-			children = (
-				34FA47AF29BFF6D820D507B5F9A98F6E /* LBCustemPresentTransitions.h */,
-				19238AACD2BEDFF078DE1164C6E6B9A4 /* LBCustemPresentTransitions.m */,
-				837BCBE4B0D427FC2F55FF7EED2C163C /* Support Files */,
-			);
-			name = LBCustemPresentTransitions;
-			path = LBCustemPresentTransitions;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		688F89ADD61BCE105D18D048BF3EE406 /* Headers */ = {
+		A1C3BD2C66D47D2091B873CEF99EF89C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A5698E64C3D2C2265D0C2D76682272 /* LBPresentTransitions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A02BD662BE2AA2548C8C11D74BA217F /* Headers */ = {
+		A44B7DF482F1B50DE5923EF820E9C3FC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0826FAB6ADCB7508C5D17C7465B426 /* LBCustemPresentTransitions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3586A0FD2146A4C9B9F6223A39912874 /* LBCustemPresentTransitions */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8EC903E2E9055C960D2AFB82076D6E29 /* Build configuration list for PBXNativeTarget "LBCustemPresentTransitions" */;
-			buildPhases = (
-				6A02BD662BE2AA2548C8C11D74BA217F /* Headers */,
-				88198AB7324CD4424B1074CA74A2666C /* Sources */,
-				FC4704B45D342B57AAD7110DC8428A1A /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LBCustemPresentTransitions;
-			productName = LBCustemPresentTransitions;
-			productReference = 3EB33FEFE1754D9A324F3192EE736583 /* libLBCustemPresentTransitions.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		9FFD303DC6109F3F4863E05E9748B9AC /* Pods-LBAlertControllerExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2B8A08614BCCC9C2EA367641FBF68912 /* Build configuration list for PBXNativeTarget "Pods-LBAlertControllerExample" */;
+			buildConfigurationList = 3708E6EA62EC2AC6601CB313AE9D1119 /* Build configuration list for PBXNativeTarget "Pods-LBAlertControllerExample" */;
 			buildPhases = (
-				688F89ADD61BCE105D18D048BF3EE406 /* Headers */,
-				B97ECD9A47A9C4DF259E8E2AB994B5C1 /* Sources */,
-				1B116919D3633342F446F937A35505EA /* Frameworks */,
+				A44B7DF482F1B50DE5923EF820E9C3FC /* Headers */,
+				71DE6E203C71A9653C1CCE4875015125 /* Sources */,
+				25E0BD1CC138D62382A2EA9412F66217 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				08008F7C359FE3839C93F4DFB376911C /* PBXTargetDependency */,
+				8C2E1D086DCD327A438BD3D46854EE1C /* PBXTargetDependency */,
 			);
 			name = "Pods-LBAlertControllerExample";
 			productName = "Pods-LBAlertControllerExample";
 			productReference = 6A048B36A52F3AEC90ECB2B17E3F208C /* libPods-LBAlertControllerExample.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E7445FC9D56CEAF43DD4EFE332940EFA /* LBPresentTransitions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5ED4AB9A14F09F2A8E379C3FE32021C /* Build configuration list for PBXNativeTarget "LBPresentTransitions" */;
+			buildPhases = (
+				A1C3BD2C66D47D2091B873CEF99EF89C /* Headers */,
+				541127600B7E49D6AC7B5FC3F403ABC2 /* Sources */,
+				A1F9C42DFEF59A20020646867532BE5F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LBPresentTransitions;
+			productName = LBPresentTransitions;
+			productReference = 6F0F8CDAE0F4FD3BCADCE30DAC78D1B9 /* libLBPresentTransitions.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -208,71 +208,70 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5052128037DF5D269014FCBE6A835B13 /* Products */;
+			productRefGroup = CBCA19D619B08E750BD4960E8F6E74F6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3586A0FD2146A4C9B9F6223A39912874 /* LBCustemPresentTransitions */,
+				E7445FC9D56CEAF43DD4EFE332940EFA /* LBPresentTransitions */,
 				9FFD303DC6109F3F4863E05E9748B9AC /* Pods-LBAlertControllerExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		88198AB7324CD4424B1074CA74A2666C /* Sources */ = {
+		541127600B7E49D6AC7B5FC3F403ABC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0B4FDCEEEF128C9EAD521982BD12470 /* LBCustemPresentTransitions-dummy.m in Sources */,
-				8694B3FD232A99DA5445C34253FBF288 /* LBCustemPresentTransitions.m in Sources */,
+				C515C0592234B690F26E72163F5FB390 /* LBPresentTransitions-dummy.m in Sources */,
+				D3BC59AEA425E607ACA92849C3CA2A1F /* LBPresentTransitions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B97ECD9A47A9C4DF259E8E2AB994B5C1 /* Sources */ = {
+		71DE6E203C71A9653C1CCE4875015125 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96737C267211D4C07170F7AB2F8D7710 /* Pods-LBAlertControllerExample-dummy.m in Sources */,
+				6B9C9252E740CEF85DB1112CDF92DEA2 /* Pods-LBAlertControllerExample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		08008F7C359FE3839C93F4DFB376911C /* PBXTargetDependency */ = {
+		8C2E1D086DCD327A438BD3D46854EE1C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = LBCustemPresentTransitions;
-			target = 3586A0FD2146A4C9B9F6223A39912874 /* LBCustemPresentTransitions */;
-			targetProxy = 64EE2D72326178AF4C334AC901AD438D /* PBXContainerItemProxy */;
+			name = LBPresentTransitions;
+			target = E7445FC9D56CEAF43DD4EFE332940EFA /* LBPresentTransitions */;
+			targetProxy = 05B357B27B826B7E77A13880D07ED488 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		111AD28FA69D29203ED15781CC98F344 /* Release */ = {
+		170BFE15F6C26267622A7A61F6E528C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50E0034FBD688E836E18EC16BDCA4ADC /* LBCustemPresentTransitions.xcconfig */;
+			baseConfigurationReference = A1549020750B15621AE23736F0F77C5D /* LBPresentTransitions.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/LBCustemPresentTransitions/LBCustemPresentTransitions-prefix.pch";
+				GCC_PREFIX_HEADER = "Target Support Files/LBPresentTransitions/LBPresentTransitions-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = LBCustemPresentTransitions;
-				PRODUCT_NAME = LBCustemPresentTransitions;
+				PRODUCT_MODULE_NAME = LBPresentTransitions;
+				PRODUCT_NAME = LBPresentTransitions;
 				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
-		2F54D660FAAF9217906595E583BBFC77 /* Debug */ = {
+		17A2E4E77BC7B21D8F65FF62C57367F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DCF77F0CF643E5882A90843A49146EE7 /* Pods-LBAlertControllerExample.debug.xcconfig */;
 			buildSettings = {
@@ -417,7 +416,31 @@
 			};
 			name = Debug;
 		};
-		85742BE068E256AC71A0FE47C7FE2C15 /* Release */ = {
+		C983FFCC4B492EA6286B91B7C056A853 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1549020750B15621AE23736F0F77C5D /* LBPresentTransitions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/LBPresentTransitions/LBPresentTransitions-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = LBPresentTransitions;
+				PRODUCT_NAME = LBPresentTransitions;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FEB38184DEE90383C9488B2CDAAE104A /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 78AE602563026246EA5FA1D3FC71D7A1 /* Pods-LBAlertControllerExample.release.xcconfig */;
 			buildSettings = {
@@ -439,37 +462,14 @@
 			};
 			name = Release;
 		};
-		B7BDFD1D2E707CBAF4726712F8A8109E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50E0034FBD688E836E18EC16BDCA4ADC /* LBCustemPresentTransitions.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/LBCustemPresentTransitions/LBCustemPresentTransitions-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = LBCustemPresentTransitions;
-				PRODUCT_NAME = LBCustemPresentTransitions;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2B8A08614BCCC9C2EA367641FBF68912 /* Build configuration list for PBXNativeTarget "Pods-LBAlertControllerExample" */ = {
+		3708E6EA62EC2AC6601CB313AE9D1119 /* Build configuration list for PBXNativeTarget "Pods-LBAlertControllerExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F54D660FAAF9217906595E583BBFC77 /* Debug */,
-				85742BE068E256AC71A0FE47C7FE2C15 /* Release */,
+				17A2E4E77BC7B21D8F65FF62C57367F8 /* Debug */,
+				FEB38184DEE90383C9488B2CDAAE104A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -483,11 +483,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8EC903E2E9055C960D2AFB82076D6E29 /* Build configuration list for PBXNativeTarget "LBCustemPresentTransitions" */ = {
+		B5ED4AB9A14F09F2A8E379C3FE32021C /* Build configuration list for PBXNativeTarget "LBPresentTransitions" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B7BDFD1D2E707CBAF4726712F8A8109E /* Debug */,
-				111AD28FA69D29203ED15781CC98F344 /* Release */,
+				170BFE15F6C26267622A7A61F6E528C0 /* Debug */,
+				C983FFCC4B492EA6286B91B7C056A853 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

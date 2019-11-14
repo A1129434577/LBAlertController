@@ -4,6 +4,6 @@ inhibit_all_warnings!
 
 target “LBAlertControllerExample” do
 
-pod 'LBCustemPresentTransitions'
+pod 'LBPresentTransitions'
 
 end

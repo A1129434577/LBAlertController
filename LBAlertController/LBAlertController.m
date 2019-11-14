@@ -7,7 +7,7 @@
 //
 
 #import "LBAlertController.h"
-#import "LBCustemPresentTransitions.h"
+#import "LBPresentTransitions.h"
 
 @implementation LBAlertActionButton
 - (instancetype)initWithBounds:(CGRect)frame action:(void (^)(LBAlertActionButton * _Nonnull))action
@@ -26,15 +26,21 @@
 
 @end
 
+@interface LBAlertController ()
+{
+    LBPresentTransitions *_transitions;
+}
+@end
 @implementation LBAlertController
 
 - (instancetype)initWithAlertTitle:(NSString *)title message:(NSString *)message
 {
     self = [super init];
     if (self) {
-        LBCustemPresentTransitions *transitions = [LBCustemPresentTransitions shareInstanse];
-        transitions.contentMode = LBViewContentModeCenter;
-        self.transitioningDelegate = transitions;
+        _transitions = [LBPresentTransitions new];
+        _transitions.coverViewType = LBTransitionsCoverViewAlpha0_5;
+        _transitions.contentMode = LBTransitionsContentModeCenter;
+        self.transitioningDelegate = _transitions;
         self.modalPresentationStyle = UIModalPresentationCustom;
         
         _alertTitle = title;
