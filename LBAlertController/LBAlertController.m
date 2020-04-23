@@ -71,7 +71,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     
-    self.view.frame = CGRectMake((CGRectGetWidth(self.view.bounds)-250)/2, 0, 250, 0);
+    self.view.frame = CGRectMake((self.viewWidth==0)?50:((CGRectGetWidth(self.view.bounds)-self.viewWidth)/2), 0, (self.viewWidth==0)?(CGRectGetWidth(self.view.bounds)-50*2):self.viewWidth, 0);
     CGFloat alertTitleWidth = CGRectGetWidth(self.view.frame)-15*2;
     _alertTitleLabel.frame = CGRectMake((CGRectGetWidth(self.view.frame)-alertTitleWidth)/2, 15, alertTitleWidth, [_alertTitleLabel sizeThatFits:CGSizeMake(alertTitleWidth, MAXFLOAT)].height);
     [self.view addSubview:_alertTitleLabel];

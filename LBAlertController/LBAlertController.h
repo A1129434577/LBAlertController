@@ -14,6 +14,7 @@
 @end
 
 @interface LBAlertController : UIViewController
+@property (nonatomic, assign) CGFloat viewWidth;
 @property (nonatomic,strong,readonly,nonnull)UILabel *alertTitleLabel;
 @property (nonatomic,strong,readonly,nonnull)UILabel *alertMessageLabel;
 @property (nonatomic,assign)NSTextAlignment messageTextAlignment;
