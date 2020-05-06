@@ -15,6 +15,8 @@
 
 @interface LBAlertController : UIViewController
 @property (nonatomic, assign) CGFloat viewWidth;
+@property (nonatomic, assign) UIEdgeInsets titleLabelInset;//if alertTitle == nil UIEdgeInsetsMake(0, 15, 0, 15) else UIEdgeInsetsMake(15, 15, 15, 15)
+@property (nonatomic, assign) UIEdgeInsets messageLabelInset;//if alertMessage == nil UIEdgeInsetsMake(0, 25, 0, 25) else UIEdgeInsetsMake(0, 25, 25, 25)
 @property (nonatomic,strong,readonly,nonnull)UILabel *alertTitleLabel;
 @property (nonatomic,strong,readonly,nonnull)UILabel *alertMessageLabel;
 @property (nonatomic,assign)NSTextAlignment messageTextAlignment;
