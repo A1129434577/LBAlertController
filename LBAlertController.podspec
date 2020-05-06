@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "LBAlertController"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "扩展系统UIAlertController功能"
   spec.description  = "扩展系统UIAlertController功能，使其在title和message与actionButton之间的位置能自定义一个view，并且actionButton样式完全由使用者掌控。"
   spec.homepage     = "https://github.com/A1129434577/LBAlertController"
