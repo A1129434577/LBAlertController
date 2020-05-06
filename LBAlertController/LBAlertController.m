@@ -33,8 +33,7 @@
 @end
 @implementation LBAlertController
 
-- (instancetype)initWithAlertTitle:(NSString *)title message:(NSString *)message
-{
+- (instancetype)initWithAlertTitle:(id)title message:(id)message{
     self = [super init];
     if (self) {
         _transitions = [LBPresentTransitions new];
@@ -53,13 +52,21 @@
         
         _alertTitleLabel = [[UILabel alloc] init];
         _alertTitleLabel.font = [UIFont systemFontOfSize:15];
-        _alertTitleLabel.text = title;
+        if ([title isKindOfClass:NSString.self]) {
+            _alertTitleLabel.text = title;
+        }else if ([title isKindOfClass:NSAttributedString.self]){
+            _alertTitleLabel.attributedText = title;
+        }
         _alertTitleLabel.numberOfLines = 0;
         _alertTitleLabel.textAlignment = NSTextAlignmentCenter;
         
         
         _alertMessageLabel = [[UILabel alloc] init];
-        _alertMessageLabel.text = message;
+        if ([message isKindOfClass:NSString.self]) {
+            _alertMessageLabel.text = message;
+        }else if ([message isKindOfClass:NSAttributedString.self]){
+            _alertMessageLabel.attributedText = message;
+        }
         _alertMessageLabel.font = [UIFont systemFontOfSize:14];
         _alertMessageLabel.numberOfLines = 0;
         _alertMessageLabel.textAlignment = NSTextAlignmentCenter;
@@ -81,6 +88,7 @@
     if (alertTitleHeight == 0) {
         _titleLabelInset.top = 0;
         _titleLabelInset.bottom = 0;
+        _messageLabelInset.top = _messageLabelInset.bottom;
     }
     _alertTitleLabel.frame = CGRectMake(_titleLabelInset.left, _titleLabelInset.top, alertTitleWidth, alertTitleHeight);
     [self.view addSubview:_alertTitleLabel];
@@ -123,15 +131,9 @@
         }];
     }
     
-    
     CGRect contentViewFrame = self.view.frame;
     contentViewFrame.size.height = CGRectGetMaxY((_buttonArray.count?_buttonArray.lastObject:(_userView?_userView:_alertMessageLabel)).frame);
     self.view.frame = contentViewFrame;
-}
-
--(void)setMessageTextAlignment:(NSTextAlignment)messageTextAlignment{
-    _messageTextAlignment = messageTextAlignment;
-    _alertMessageLabel.textAlignment = messageTextAlignment;
 }
 
 - (void)setUserView:(UIView *)userView{
@@ -139,26 +141,31 @@
     [self loadView];
 }
 
--(void)setAlertTitle:(NSString *)alertTitle{
+-(void)setAlertTitle:(id)alertTitle{
     _alertTitle = alertTitle;
-    _alertTitleLabel.text = alertTitle;
+    if ([alertTitle isKindOfClass:NSString.self]) {
+        _alertTitleLabel.text = alertTitle;
+    }else if ([alertTitle isKindOfClass:NSAttributedString.self]){
+        _alertTitleLabel.attributedText = alertTitle;
+    }
+    
     [self loadView];
 }
 
--(void)setAlertMessage:(NSString *)alertMessage{
+-(void)setAlertMessage:(id)alertMessage{
     _alertMessage = alertMessage;
-    _alertMessageLabel.text = alertMessage;
+    if ([alertMessage isKindOfClass:NSString.self]) {
+        _alertMessageLabel.text = alertMessage;
+    }else if ([alertMessage isKindOfClass:NSAttributedString.self]){
+        _alertMessageLabel.attributedText = alertMessage;
+    }
+    
     [self loadView];
 }
 
 -(void)addActionButton:(LBAlertActionButton *)actionButton{
     [_buttonArray addObject:actionButton];
     [self loadView];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

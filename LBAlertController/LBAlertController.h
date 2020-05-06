@@ -15,17 +15,16 @@
 
 @interface LBAlertController : UIViewController
 @property (nonatomic, assign) CGFloat viewWidth;
-@property (nonatomic, assign) UIEdgeInsets titleLabelInset;//if alertTitle == nil UIEdgeInsetsMake(0, 15, 0, 15) else UIEdgeInsetsMake(15, 15, 15, 15)
-@property (nonatomic, assign) UIEdgeInsets messageLabelInset;//if alertMessage == nil UIEdgeInsetsMake(0, 25, 0, 25) else UIEdgeInsetsMake(0, 25, 25, 25)
+@property (nonatomic, assign) UIEdgeInsets titleLabelInset;
+@property (nonatomic, assign) UIEdgeInsets messageLabelInset;
 @property (nonatomic,strong,readonly,nonnull)UILabel *alertTitleLabel;
 @property (nonatomic,strong,readonly,nonnull)UILabel *alertMessageLabel;
-@property (nonatomic,assign)NSTextAlignment messageTextAlignment;
 @property (nonatomic,strong,nullable)UIView *userView;
-@property (nonatomic,copy,nullable) NSString *alertTitle;
-@property (nonatomic,copy,nullable) NSString *alertMessage;
+@property (nonatomic,copy,nullable) id alertTitle;
+@property (nonatomic,copy,nullable) id alertMessage;
 @property (nonatomic,strong,readonly,nullable)NSMutableArray<LBAlertActionButton *> *buttonArray;
 
-- (nonnull instancetype)initWithAlertTitle:(nullable NSString*)title message:(nullable NSString *)message;
+- (nonnull instancetype)initWithAlertTitle:(nullable id)title message:(nullable id)message;
 
 -(void)addActionButton:(LBAlertActionButton *_Nonnull)actionButton;
 @end
