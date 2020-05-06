@@ -88,7 +88,9 @@
     if (alertTitleHeight == 0) {
         _titleLabelInset.top = 0;
         _titleLabelInset.bottom = 0;
-        _messageLabelInset.top = _messageLabelInset.bottom;
+        if (_messageLabelInset.top == 0) {
+            _messageLabelInset.top = _messageLabelInset.bottom;
+        }
     }
     _alertTitleLabel.frame = CGRectMake(_titleLabelInset.left, _titleLabelInset.top, alertTitleWidth, alertTitleHeight);
     [self.view addSubview:_alertTitleLabel];
