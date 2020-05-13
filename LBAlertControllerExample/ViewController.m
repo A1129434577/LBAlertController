@@ -28,7 +28,12 @@
 }
 
 -(void)showAlert{
-    LBAlertController *alertC = [[LBAlertController alloc] initWithAlertTitle:@"提示" message:@"这是一个自定义弹窗"];
+    NSString *message = @"这是一个自定义弹窗";
+    NSMutableAttributedString *messageAtt = [[NSMutableAttributedString alloc] initWithString:message];
+    [messageAtt addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15],NSForegroundColorAttributeName:[UIColor blueColor]} range:NSMakeRange(0, messageAtt.length)];
+    [messageAtt addAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} range:[message rangeOfString:@"自定义"]];
+    
+    LBAlertController *alertC = [[LBAlertController alloc] initWithAlertTitle:@"提示" message:messageAtt];
     
     
     typeof(self) __weak weakSelf = self;

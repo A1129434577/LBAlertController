@@ -52,25 +52,24 @@
         
         _alertTitleLabel = [[UILabel alloc] init];
         _alertTitleLabel.font = [UIFont systemFontOfSize:15];
+        _alertTitleLabel.numberOfLines = 0;
+        _alertTitleLabel.textAlignment = NSTextAlignmentCenter;
         if ([title isKindOfClass:NSString.self]) {
             _alertTitleLabel.text = title;
         }else if ([title isKindOfClass:NSAttributedString.self]){
             _alertTitleLabel.attributedText = title;
         }
-        _alertTitleLabel.numberOfLines = 0;
-        _alertTitleLabel.textAlignment = NSTextAlignmentCenter;
-        
         
         _alertMessageLabel = [[UILabel alloc] init];
+        _alertMessageLabel.font = [UIFont systemFontOfSize:14];
+        _alertMessageLabel.numberOfLines = 0;
+        _alertMessageLabel.textAlignment = NSTextAlignmentCenter;
+        _alertMessageLabel.textColor = [UIColor darkGrayColor];
         if ([message isKindOfClass:NSString.self]) {
             _alertMessageLabel.text = message;
         }else if ([message isKindOfClass:NSAttributedString.self]){
             _alertMessageLabel.attributedText = message;
         }
-        _alertMessageLabel.font = [UIFont systemFontOfSize:14];
-        _alertMessageLabel.numberOfLines = 0;
-        _alertMessageLabel.textAlignment = NSTextAlignmentCenter;
-        _alertMessageLabel.textColor = [UIColor darkGrayColor];
     }
     return self;
 }
@@ -79,7 +78,6 @@
     self.view.layer.cornerRadius = 8;
     self.view.clipsToBounds = YES;
     self.view.backgroundColor = [UIColor whiteColor];
-    
     
     self.view.frame = CGRectMake((self.viewWidth==0)?50:((CGRectGetWidth(self.view.bounds)-self.viewWidth)/2), 0, (self.viewWidth==0)?(CGRectGetWidth(self.view.bounds)-50*2):self.viewWidth, 0);
     
