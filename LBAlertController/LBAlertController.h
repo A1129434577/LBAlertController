@@ -18,10 +18,10 @@
 @property (nonatomic, assign) UIEdgeInsets titleLabelInset;
 @property (nonatomic, assign) UIEdgeInsets messageLabelInset;
 @property (nonatomic,strong,readonly,nonnull)UILabel *alertTitleLabel;
-@property (nonatomic,strong,readonly,nonnull)UILabel *alertMessageLabel;
+@property (nonatomic,strong,readonly,nonnull)UITextView *alertMessageTextView;
 @property (nonatomic,strong,nullable)UIView *userView;
-@property (nonatomic,copy,nullable) id alertTitle;
-@property (nonatomic,copy,nullable) id alertMessage;
+@property (nonatomic,copy,nullable) id alertTitle;//NSString or NSAttributedString
+@property (nonatomic,copy,nullable) id alertMessage;//NSString or NSAttributedString
 @property (nonatomic,strong,readonly,nullable)NSMutableArray<LBAlertActionButton *> *buttonArray;
 
 - (nonnull instancetype)initWithAlertTitle:(nullable id)title message:(nullable id)message;

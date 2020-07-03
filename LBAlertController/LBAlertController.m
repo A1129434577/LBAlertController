@@ -51,7 +51,7 @@
         _buttonArray = [[NSMutableArray alloc] init];
         
         _alertTitleLabel = [[UILabel alloc] init];
-        _alertTitleLabel.font = [UIFont systemFontOfSize:15];
+        _alertTitleLabel.font = [UIFont systemFontOfSize:17];
         _alertTitleLabel.numberOfLines = 0;
         _alertTitleLabel.textAlignment = NSTextAlignmentCenter;
         if ([title isKindOfClass:NSString.self]) {
@@ -60,16 +60,54 @@
             _alertTitleLabel.attributedText = title;
         }
         
-        _alertMessageLabel = [[UILabel alloc] init];
-        _alertMessageLabel.font = [UIFont systemFontOfSize:14];
-        _alertMessageLabel.numberOfLines = 0;
-        _alertMessageLabel.textAlignment = NSTextAlignmentCenter;
-        _alertMessageLabel.textColor = [UIColor darkGrayColor];
+        _alertMessageTextView = [[UITextView alloc] init];
+        _alertMessageTextView.scrollEnabled = NO;
+        _alertMessageTextView.editable = NO;
+        
         if ([message isKindOfClass:NSString.self]) {
-            _alertMessageLabel.text = message;
+            _alertMessageTextView.font = [UIFont systemFontOfSize:_alertTitleLabel.font.pointSize-1];
+            _alertMessageTextView.textColor = [UIColor darkGrayColor];
+            _alertMessageTextView.textAlignment = NSTextAlignmentCenter;
+            
+            _alertMessageTextView.text = message;
         }else if ([message isKindOfClass:NSAttributedString.self]){
-            _alertMessageLabel.attributedText = message;
+            NSAttributedString *messageAtt = message;
+            _alertMessageTextView.attributedText = messageAtt;
+            
+            //如果富文本没有这几个主要设置，那么给其设置默认值
+            __block BOOL messageAttHaveFont = NO;
+            __block BOOL messageAttHaveColor = NO;
+            __block BOOL messageAttHaveParagraphStyle = NO;
+            [messageAtt enumerateAttributesInRange:NSMakeRange(0, messageAtt.length) options:0 usingBlock:^(NSDictionary<NSAttributedStringKey,id> * _Nonnull attrs, NSRange range, BOOL * _Nonnull stop) {
+                if (messageAttHaveFont == NO) {
+                    if (attrs[NSFontAttributeName]) {
+                        messageAttHaveFont = YES;
+                    }
+                }
+                if (messageAttHaveColor == NO) {
+                    if (attrs[NSForegroundColorAttributeName]) {
+                        messageAttHaveColor = YES;
+                    }
+                }
+                if (messageAttHaveParagraphStyle == NO) {
+                    if (attrs[NSParagraphStyleAttributeName]) {
+                        messageAttHaveParagraphStyle = YES;
+                    }
+                }
+                
+            }];
+            
+            if (messageAttHaveFont == NO) {
+                _alertMessageTextView.font = [UIFont systemFontOfSize:_alertTitleLabel.font.pointSize-1];
+            }
+            if (messageAttHaveColor == NO) {
+                _alertMessageTextView.textColor = [UIColor darkGrayColor];
+            }
+            if (messageAttHaveParagraphStyle == NO) {
+                _alertMessageTextView.textAlignment = NSTextAlignmentCenter;
+            }
         }
+        
     }
     return self;
 }
@@ -95,15 +133,15 @@
     
     
     CGFloat alertMessageWidth = CGRectGetWidth(self.view.frame)-_messageLabelInset.left-_messageLabelInset.right;
-    CGFloat alertMessageHeight = [_alertMessageLabel sizeThatFits:CGSizeMake(alertMessageWidth, CGFLOAT_MAX)].height;
+    CGFloat alertMessageHeight = [_alertMessageTextView sizeThatFits:CGSizeMake(alertMessageWidth, CGFLOAT_MAX)].height;
     if (alertMessageHeight == 0) {
         _messageLabelInset.top = 0;
         _messageLabelInset.bottom = 0;
     }
-    _alertMessageLabel.frame = CGRectMake(_messageLabelInset.left, CGRectGetMaxY(_alertTitleLabel.frame)+_titleLabelInset.bottom+_messageLabelInset.top, alertMessageWidth, alertMessageHeight);
-    [self.view addSubview:_alertMessageLabel];
+    _alertMessageTextView.frame = CGRectMake(_messageLabelInset.left, CGRectGetMaxY(_alertTitleLabel.frame)+_titleLabelInset.bottom+_messageLabelInset.top, alertMessageWidth, alertMessageHeight);
+    [self.view addSubview:_alertMessageTextView];
     
-    _userView.frame = CGRectMake((CGRectGetWidth(self.view.frame)-CGRectGetWidth(_userView.frame))/2, CGRectGetMaxY(_alertMessageLabel.frame)+_messageLabelInset.bottom, CGRectGetWidth(_userView.frame), CGRectGetHeight(_userView.frame));
+    _userView.frame = CGRectMake((CGRectGetWidth(self.view.frame)-CGRectGetWidth(_userView.frame))/2, CGRectGetMaxY(_alertMessageTextView.frame)+_messageLabelInset.bottom, CGRectGetWidth(_userView.frame), CGRectGetHeight(_userView.frame));
     [self.view addSubview:_userView];
     
     
@@ -116,7 +154,7 @@
     if (horizontalSpace < 0) {//button竖排模式
         __block CGFloat heightCurrentSum = 0;
         [_buttonArray enumerateObjectsUsingBlock:^(LBAlertActionButton * _Nonnull actionBtn, NSUInteger idx, BOOL * _Nonnull stop) {
-            actionBtn.frame = CGRectMake((CGRectGetWidth(weakSelf.view.bounds)-CGRectGetWidth(actionBtn.bounds))/2, CGRectGetMaxY(weakSelf.alertMessageLabel.frame)+weakSelf.messageLabelInset.bottom+CGRectGetHeight(weakSelf.userView.frame)+heightCurrentSum+idx*10, CGRectGetWidth(actionBtn.bounds), CGRectGetHeight(actionBtn.bounds));
+            actionBtn.frame = CGRectMake((CGRectGetWidth(weakSelf.view.bounds)-CGRectGetWidth(actionBtn.bounds))/2, CGRectGetMaxY(weakSelf.alertMessageTextView.frame)+weakSelf.messageLabelInset.bottom+CGRectGetHeight(weakSelf.userView.frame)+heightCurrentSum+idx*10, CGRectGetWidth(actionBtn.bounds), CGRectGetHeight(actionBtn.bounds));
             [weakSelf.view  addSubview:actionBtn];
             
             heightCurrentSum += CGRectGetHeight(actionBtn.bounds);
@@ -124,7 +162,7 @@
     }else{//button横排模式
         __block CGFloat widthCurrentSum = 0;
         [_buttonArray enumerateObjectsUsingBlock:^(LBAlertActionButton * _Nonnull actionBtn, NSUInteger idx, BOOL * _Nonnull stop) {
-            actionBtn.frame = CGRectMake(widthCurrentSum+horizontalSpace*(idx+1), CGRectGetMaxY(weakSelf.alertMessageLabel.frame)+weakSelf.messageLabelInset.bottom+CGRectGetHeight(weakSelf.userView.frame), CGRectGetWidth(actionBtn.bounds), CGRectGetHeight(actionBtn.bounds));
+            actionBtn.frame = CGRectMake(widthCurrentSum+horizontalSpace*(idx+1), CGRectGetMaxY(weakSelf.alertMessageTextView.frame)+weakSelf.messageLabelInset.bottom+CGRectGetHeight(weakSelf.userView.frame), CGRectGetWidth(actionBtn.bounds), CGRectGetHeight(actionBtn.bounds));
             [weakSelf.view  addSubview:actionBtn];
             
             widthCurrentSum += CGRectGetWidth(actionBtn.bounds);
@@ -132,7 +170,7 @@
     }
     
     CGRect contentViewFrame = self.view.frame;
-    contentViewFrame.size.height = CGRectGetMaxY((_buttonArray.count?_buttonArray.lastObject:(_userView?_userView:_alertMessageLabel)).frame);
+    contentViewFrame.size.height = CGRectGetMaxY((_buttonArray.count?_buttonArray.lastObject:(_userView?_userView:_alertMessageTextView)).frame);
     self.view.frame = contentViewFrame;
 }
 
@@ -155,9 +193,9 @@
 -(void)setAlertMessage:(id)alertMessage{
     _alertMessage = alertMessage;
     if ([alertMessage isKindOfClass:NSString.self]) {
-        _alertMessageLabel.text = alertMessage;
+        _alertMessageTextView.text = alertMessage;
     }else if ([alertMessage isKindOfClass:NSAttributedString.self]){
-        _alertMessageLabel.attributedText = alertMessage;
+        _alertMessageTextView.attributedText = alertMessage;
     }
     
     [self loadView];
