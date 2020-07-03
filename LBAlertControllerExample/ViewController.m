@@ -33,8 +33,7 @@
     [messageAtt addAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15],NSForegroundColorAttributeName:[UIColor blueColor]} range:NSMakeRange(0, messageAtt.length)];
     [messageAtt addAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} range:[message rangeOfString:@"自定义"]];
     
-    LBAlertController *alertC = [[LBAlertController alloc] initWithAlertTitle:@"提示" message:messageAtt];
-    
+    LBAlertController *alertC = [[LBAlertController alloc] initWithAlertTitle:nil message:nil];
     
     typeof(self) __weak weakSelf = self;
     LBAlertActionButton *actionCancelBtn = [[LBAlertActionButton alloc] initWithBounds:CGRectMake(0, 0, CGRectGetWidth(alertC.view.frame)/2, 50) action:^(LBAlertActionButton *sender) {

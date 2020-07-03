@@ -134,6 +134,9 @@
     
     CGFloat alertMessageWidth = CGRectGetWidth(self.view.frame)-_messageLabelInset.left-_messageLabelInset.right;
     CGFloat alertMessageHeight = [_alertMessageTextView sizeThatFits:CGSizeMake(alertMessageWidth, CGFLOAT_MAX)].height;
+    if ([self.alertMessage length] == 0) {//UITextView当text未空的时候算出来的高度并不为0，需要手动处理
+        alertMessageHeight = 0;
+    }
     if (alertMessageHeight == 0) {
         _messageLabelInset.top = 0;
         _messageLabelInset.bottom = 0;
