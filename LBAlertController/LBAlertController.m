@@ -61,6 +61,7 @@
         }
         
         _alertMessageTextView = [[UITextView alloc] init];
+        _alertMessageTextView.backgroundColor = [UIColor clearColor];
         _alertMessageTextView.scrollEnabled = NO;
         _alertMessageTextView.editable = NO;
         
@@ -115,7 +116,11 @@
     [super loadView];
     self.view.layer.cornerRadius = 8;
     self.view.clipsToBounds = YES;
-    self.view.backgroundColor = [UIColor whiteColor];
+    if (@available(iOS 13.0, *)) {
+        self.view.backgroundColor = [UIColor systemGroupedBackgroundColor];
+    } else {
+        self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    }
     
     self.view.frame = CGRectMake((self.viewWidth==0)?50:((CGRectGetWidth(self.view.bounds)-self.viewWidth)/2), 0, (self.viewWidth==0)?(CGRectGetWidth(self.view.bounds)-50*2):self.viewWidth, 0);
     
