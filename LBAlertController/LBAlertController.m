@@ -55,7 +55,7 @@
         _alertTitleLabel.numberOfLines = 0;
         _alertTitleLabel.textAlignment = NSTextAlignmentCenter;
         if ([title isKindOfClass:NSString.self]) {
-            _alertTitleLabel.text = title;
+            _alertTitleLabel.text = NSLocalizedString(title, nil);
         }else if ([title isKindOfClass:NSAttributedString.self]){
             _alertTitleLabel.attributedText = title;
         }
@@ -70,7 +70,7 @@
             _alertMessageTextView.textColor = [UIColor darkGrayColor];
             _alertMessageTextView.textAlignment = NSTextAlignmentCenter;
             
-            _alertMessageTextView.text = message;
+            _alertMessageTextView.text = NSLocalizedString(message, nil);
         }else if ([message isKindOfClass:NSAttributedString.self]){
             NSAttributedString *messageAtt = message;
             _alertMessageTextView.attributedText = messageAtt;
@@ -190,7 +190,7 @@
 -(void)setAlertTitle:(id)alertTitle{
     _alertTitle = alertTitle;
     if ([alertTitle isKindOfClass:NSString.self]) {
-        _alertTitleLabel.text = alertTitle;
+        _alertTitleLabel.text = NSLocalizedString(alertTitle, nil);
     }else if ([alertTitle isKindOfClass:NSAttributedString.self]){
         _alertTitleLabel.attributedText = alertTitle;
     }
@@ -201,7 +201,7 @@
 -(void)setAlertMessage:(id)alertMessage{
     _alertMessage = alertMessage;
     if ([alertMessage isKindOfClass:NSString.self]) {
-        _alertMessageTextView.text = alertMessage;
+        _alertMessageTextView.text = NSLocalizedString(alertMessage, nil);
     }else if ([alertMessage isKindOfClass:NSAttributedString.self]){
         _alertMessageTextView.attributedText = alertMessage;
     }
